@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>QR Code</title>
+	
+	<link rel="stylesheet" type="text/css" href="My CSS/style.css" />
+	
+	<script type="text/javascript" src="My JS/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="My JS/html2canvas.min.js"></script>
+	<script type="text/javascript" src="My JS/html2canvas.js"></script>
+	<script type="text/javascript" src="My JS/qrcode.min.js"></script>
+	<script type="text/javascript" src="My JS/qrReader.js"></script>
+	<script type="text/javascript" src="My JS/code.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header">
+			WELCOME
+		</div>
+		<!--<div id="menu">Menu</div>-->
+		<div id="content-web">
+			<div id="left">
+				<center><h1>QR Code Generator</h1></center>
+				
+				<br>
+				
+				<div style="margin-left: 10px">
+					Link (or content): 
+					
+					<p>
+						<textarea id="qr-data" placeholder="Type here..."></textarea>
+					</p>
+		
+					Logo: 
+					<input type="file" id="file-logo" name="file-logo" />
+				</div>
+				
+				<br>
+				
+				
+				<div id="qr-container">
+					<div id="qrcode"></div>
+					<div id="cover" class="logo"></div>
+					<img id="qrlogo" class="logo" src="#" />
+				</div>
+				
+					
+				<br>
+				
+				<div class="div-button">
+					<button id="button-submit">Creat QR Code</button>
+				</div>
+				<div class="div-button">
+					<!--Sửa tên của file download tại đây-->
+					<a href="#" id="downloadQR" download="QRcode"> 
+						<button id="button-download" style="margin-top: 1px; cursor: pointer">
+							Download
+						</button>	
+					</a>
+				</div>
+			</div>
+			<div id="right">
+				<center><h1>QR Code Reader</h1></center>
+				
+				<br>
+				
+				<div style="margin-left: 10px">
+					QR Code: <input type="file" id="file" name="file" />
+
+					<p>
+						QR Content:
+						
+						<br>
+						
+						<div id="content"></div>
+					</p>
+
+					<!--To Read QR Code-->
+					<script type="text/javascript" src="My JS/qrReader.js"></script>
+				
+					<center><button style="margin-top: 1px; font-size: 16px;" onClick="copyContent('#content')">Copy</button></center>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div style="margin: 2px 5px">
+				<h2>Contact me</h2>
+
+				<div style="margin-left: 20px">
+				&#9742;	Phone: Your phone
+
+				<br>
+
+				&#9993;	Email: Your email
+				</div>
+			</div>
+		</div>
+		<div id="div-canvas"></div>
+	</div>
+	<input class="textBox" type="text" style="display: none" />
+</body>
+</html>
